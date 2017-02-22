@@ -1,6 +1,15 @@
-<h1>Bloc Chat</h1>
+<section class="jumbotron">
+	<h1 id="home-title">Bloc Chat</h1>
+</section>
 
-<div class="row" ng-repeat="room in home.rooms">
-  <div class="col-sm-4" style="background-color:lavender;">{{room.$value}}</div>
+<div class="col-md-3 sidebar">
+	<div class="header">
+		<p class="title">Chat Rooms</p>
+	</div>
+
+	<section class="rooms-list">
+		<div ng-repeat="room in home.rooms" class="rooms">
+			<p>{{ room.$value }}</p>
+		</div>
+	</section>
 </div>
-  <div class="col-sm-8" style="background-color:lavenderblush;"></div>
