@@ -8,6 +8,7 @@
 	</div>
 
 	<section class="rooms-list">
+		<button class="btn" ng-click="home.open()">CreateRoom</button>
 		<div ng-repeat="room in home.rooms" class="rooms">
 			<p>{{ room.$value }}</p>
 		</div>

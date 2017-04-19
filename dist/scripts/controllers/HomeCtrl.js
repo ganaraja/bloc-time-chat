@@ -4,14 +4,14 @@
       this.open = function () {
         var modalInstance = $uibModal.open({
           templateUrl: '/templates/modal.html',
-          controller: 'ModalInstanceCtrl',
+          controller: 'ModalInstCtrl',
           controllerAs: 'modalCtrl',
           resolve: {
           }
         });
 
         modalInstance.result.then(function (room) {
-
+          Room.addRoom(room);
         });
       };
     };
