@@ -10,7 +10,33 @@
 	<section class="rooms-list">
 		<button class="btn" ng-click="home.open()">CreateRoom</button>
 		<div ng-repeat="room in home.rooms" class="rooms">
-			<p>{{ room.$value }}</p>
+			<p><a href="" ng-click="home.selectRoom(room)">{{ room.$value }}</a></p>
 		</div>
+	</section>
+</div>
+<div class="col-md-9">
+	<div class="header">
+		<p class="room-title">{{home.currentRoom.$value}}</p>
+	</div>
+
+	<section class="messages-list">
+			<div class="container">
+	        <table class="table">
+	            <tr ng-repeat="message in home.messages" class="row">
+	                <td>
+											<div class="username">
+	                    	{{ message.username }}:
+										  </div>
+											<div class="content">
+	                    	{{ message.content }}
+											</div>
+	                </td>
+	                <td class="sentAt">
+										<br/>
+										{{ message.sentAt }}
+									</td>
+	            </tr>
+          </table>
+     </div>
 	</section>
 </div>

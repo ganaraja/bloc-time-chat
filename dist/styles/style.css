@@ -26,3 +26,20 @@
 .sidebar .rooms-list .rooms {
 	text-align: center;
 }
+
+.row {
+    height: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.username {
+	font-weight: bold;
+}
+
+.content {
+	font-weight: normal;
+}
+
+.sentAt {
+    width: 20%;
+}
