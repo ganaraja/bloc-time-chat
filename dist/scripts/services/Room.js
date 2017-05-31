@@ -4,7 +4,14 @@
     var rooms = $firebaseArray(ref);
 
     var addRoom = function(room){
-      rooms.$add(room);
+
+       var alreadyExists = rooms.find(function(r) {
+         return r.$value === room;
+       });
+
+       if (!alreadyExists){
+            rooms.$add(room);
+       }
     };
 
     return {
