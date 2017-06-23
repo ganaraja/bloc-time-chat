@@ -43,3 +43,13 @@
 .sentAt {
     width: 20%;
 }
+
+.message-field {
+    bottom: 0;
+    padding-bottom: 5px;
+    position: fixed;
+}
+
+.message-box {
+    width: 800px;
+}

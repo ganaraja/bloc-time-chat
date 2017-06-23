@@ -21,7 +21,15 @@
         this.messages = Message.getByRoomId(this.currentRoom.$id);
         console.log(this.messages,this.currentRoom);
       };
+      this.sendMessage = function () {
+          console.log("In here")
+          this.newMessage.roomId = this.currentRoom.$id;
+          this.newMessage.username = this.currentUser;
+          Message.send(this.newMessage);
+      };
     };
+
+
 
     angular
         .module('blocChat')
