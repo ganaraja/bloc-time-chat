@@ -33,14 +33,14 @@
 	                </td>
 	                <td class="sentAt">
 										<br/>
-										{{ message.sentAt }}
+										{{ message.sentAt | date:"short" }}
 									</td>
 	            </tr>
           </table>
 					<div class="message-field">
 							<input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="home.newMessage.content" style="width:500px;">
 							<button class="btn-new-message" type="button" ng-click="home.sendMessage()">Send message</button>
-					</div>					
+					</div>
      </div>
 	</section>
 </div>
